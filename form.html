@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOMRS - Atividade 30/03/2021</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <h1>Forms</h1>
+    <h2>Realizado por: Igor Simões Fugiwara, Lucas e Paulo Demutti</h2>
+
+    <div class="content">
+        <div class="cadastro__pontos">
+            <h3>Formulário de Cadastro de Pontos Turisticos</h3>
+            <form action="">
+                <div class="nome">
+                    <label for="nomePonto">Nome do ponto turístico:</label>
+                    <input type="text" id="nomePonto" name="nomePonto" required placeholder="Ex.: Beco do Batman"
+                        autofocus>
+                </div>
+                <div class="localizacao">
+                    <label for="localizacao">Localização:</label>
+                    <input type="url" id="localizacao" name="localizacao" required placeholder="url do Google Maps">
+                </div>
+                <div class="valor">
+                    <label for="valor">Valor do ingresso (R$):</label>
+                    <input type="number" placeholder="Ex.: 0 para Gratuito ">
+                </div>
+                <div class="horario">
+                    <label for="horario">Horário de funcionamento: (abertura e fechamento ao público)</label>
+                    <div>
+                        <input type="time"> <input type="time"> 
+                    </div>
+                </div>
+                <div class="foto">
+                    <label for="foto">Foto:</label>
+                    <input type="file" accept="image/png, image/jpeg" required>
+                </div>
+                <div class="atracao">
+                    <label for="atracao">Tipo de atração:</label>
+                    <div>
+                        <select>
+                            <option value="0">Selecione o tipo de atração</option>
+                            <option value="parque">Ambiental/Parque</option>
+                            <option value="cultura">Cultural</option>
+                            <option value="historia">Histórico</option>
+                            <option value="comida">Gastronômico</option>
+                            <option value="entretenimento">Entretenimento</option>
+                        </select>
+                    </div>
+                </div>
+
+                <fieldset>
+                    <legend>Espaço</legend>
+                    <label for="aberto">Local Aberto</label>
+                    <input type="radio" name="espaco" id="aberto" value="local__aberto">
+                    <label for="fechado">Local Fechado</label>
+                    <input type="radio" name="espaco" id="fechado" value="local__fechado">
+                    <div>
+                        <label for="pet">Pet Friendly</label>
+                        <input type="checkbox" id="pet" value="pet">
+                    </div>
+                </fieldset>
+                <div class="descricao">
+                    <label for="descricao">Descrição:</label>
+                    <textarea name="descricao" id="descricao" cols="70" rows="5"
+                        required> Faça um breve release sobre a atração.</textarea>
+                </div>
+                <div class="avaliacao">
+                    <label for="avaliacao">Avalie o ponto turístico</label>
+                    <input type="range" min="0" max="10" id="avaliacao">
+                </div>
+                <fieldset>
+                    <legend>Digite os dados de acesso para confirmar cadastro:</legend>
+                    <label for="email">E-mail:</label>
+                    <input type="email" required>
+                    <label for="senha">Digite sua senha para confirmar cadastro:</label>
+                    <input type="password" id="senha" required>
+                </fieldset>
+                <div class="botoes">
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Apagar tudo</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
