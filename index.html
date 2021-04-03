@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gulliver Travel</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="header__topbar">
+      <h1 class="header__title"><a href="index.html">Gulliver Travel</a></h1>
+      <nav class="header__menu">
+        <a href="index.html">Home</a>
+        <a href="index.html">Lugares</a>
+      </nav>
+    </div>
+  </header>
+  <div class="header__slogan">
+    <h2>Cadastro de pontos turisticos do Brasil</h2>
+  </div>
+  <div class="form__container">
+    <form>
+      <label for="estados">Estados</label>
+      <select id="estados" required>
+        <option value="Alagoas">Alagoas</option>
+        <option value="Amapá">Amapá</option>
+        <option value="Amazonas">Amazonas</option>
+        <option value="Bahia">Bahia</option>
+        <option value="Ceará">Ceará</option>
+        <option value="Distrito Federal">Distrito Federal</option>
+        <option value="Espírito Santo">Espírito Santo</option>
+        <option value="Goiás">Goiás</option>
+        <option value="Maranhão">Maranhão</option>
+        <option value="Mato Grosso">Mato Grosso</option>
+        <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+        <option value="Minas Gerais">Minas Gerais</option>
+        <option value="Pará">Pará</option>
+        <option value="Paraíba">Paraíba</option>
+        <option value="Paraná">Paraná</option>
+        <option value="Pernambuco">Pernambuco</option>
+        <option value="Piauí" }>Piauí</option>
+        <option value="Rio de Janeiro">Rio de Janeiro</option>
+        <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+        <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+        <option value="Rondônia">Rondônia</option>
+        <option value="Roraima">Roraima</option>
+        <option value="Santa Catarina">Santa Catarina</option>
+        <option value="São Paulo">São Paulo</option>
+        <option value="Sergipe" }>Sergipe</option>
+        <option value="Tocantins">Tocantins</option>
+      </select>
+
+      <label for="">Cidade</label>
+      <input name="cidades" list="cidades" placeholder="Digite ou selecione a cidade" required />
+      <datalist id="cidades">
+      </datalist>
+
+      <label for="nome">Nome do ponto turistico</label>
+      <input type="text" name="nome" id="nome" placeholder="Digite o nome do ponto turistico" required>
+
+    
+        <label for="atracao">Tipo de atração:</label>
+        <div>
+          <select>
+            <option value="0">Selecione o tipo de atração</option>
+            <option value="parque">Ambiental/Parque</option>
+            <option value="cultura">Cultural</option>
+            <option value="historia">Histórico</option>
+            <option value="comida">Gastronômico</option>
+            <option value="entretenimento">Entretenimento</option>
+          </select>
+        </div>
+    
+
+   
+        <label for="valor">Valor do ingresso (R$):</label>
+        <input type="number" placeholder="Ex.: 0 para Gratuito ">
+     
+
+      <fieldset>
+        <legend>Espaço</legend>
+        <div>
+          <label for="aberto">Local Aberto</label>
+          <input type="radio" name="espaco" id="aberto" value="local__aberto">
+        </div>
+        <div>
+          <label for="fechado">Local Fechado</label>
+          <input type="radio" name="espaco" id="fechado" value="local__fechado">
+        </div>
+
+        <div>
+          <label for="pet">Pet Friendly</label>
+          <input type="checkbox" id="pet" value="pet">
+        </div>
+      </fieldset>
+
+      <label for="logradouro">Logradouro / Rua</label>
+      <input type="text" name="logradouro" id="logradouro" placeholder="Digite o nome da rua" required>
+
+      <label for="cep">CEP</label>
+      <input type="text" name="cep" id="cep" placeholder="Digite o cep">
+
+      <label for="hf">Horario de funcionamento</label>
+      <select id="hf" name="df">
+        <option value="1">Horario Comercial</option>
+        <option value="2">De manha</option>
+        <option value="3">A noite</option>
+        <option value="4">A tarde</option>
+      </select>
+
+      <label for="df">Dias de funcionamento</label>
+      <select id="df" name="df">
+        <option value="1">Todos os dias</option>
+        <option value="2">Finais de semanas e feriados</option>
+        <option value="3">2 feira a 6 Feira</option>
+      </select>
+
+      <label for="horario">Horário de funcionamento: (abertura e fechamento)</label>
+      <div class="horario">
+          <input type="time"> <input type="time"> 
+      </div>
+
+      <label for="descricao">Descricao do Local</label>
+      <textarea id="descricao" name="descricao" required></textarea>
+
+      <label for="avaliacao">Avalie o ponto turístico (0 a 10)</label>
+      <input type="range" min="0" max="10" id="avaliacao">
+
+      <label for="imagem">Image</label>
+      <input type="file" id="imagem" name="imagem" />
+      <fieldset>
+        <legend>Digite os dados de acesso para confirmar cadastro:</legend>
+        <div>
+          <label for="email">E-mail:</label>
+          <input type="email" required>
+        </div>
+        <div> <label for="senha">Senha:</label>
+          <input type="password" id="senha" required>
+        </div>
+
+      </fieldset>
+
+      <label for="imagem">Favoritar ?</label>
+      <div>
+        <input type="radio" id="imagem" name="imagem" checked />Sim
+        <input type="radio" id="imagem" name="imagem" />Nao
+      </div>
+
+
+      <input type="submit" value="Enviar" />
+      <button type="reset">Apagar tudo</button>
+    </form>
+  </div>
+  <footer>
+    <p>Gulliver Travel &copy; 2021 </p>
+  </footer>
+  <script>
+    function loadJSON(callback) {
+
+      var xobj = new XMLHttpRequest();
+      xobj.overrideMimeType("application/json");
+      xobj.open('GET', 'cidades.json', true); // Replace 'my_data' with the path to your file
+      xobj.onreadystatechange = function () {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+          callback(xobj.responseText);
+        }
+      };
+      xobj.send(null);
+    }
+
+    (function () {
+
+      loadJSON((res) => {
+        const cidadesDatalist = document.querySelector('#cidades');
+
+        JSON.parse(res).map(item => {
+          let optionItem = document.createElement('option')
+          optionItem.value = item.Nome;
+
+          cidadesDatalist.append(optionItem)
+        })
+      })
+
+    })()
+  </script>
+</body>
+
+</html>
